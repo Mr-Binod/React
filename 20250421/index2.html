@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Component</title>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script>
+    // 리액트 컴포넌트의 구조
+    // 조금 따라해보기
+    class Component {
+        target; // 전달할 값
+        state; // 상태값
+        constructor(target) {
+            this.target = target;
+            this.setUp();
+            // this.state = {name : 'soon', count : 0}
+        }
+        setUp() {
+            // 컴포넌트의 초기 설정
+            console.log('컴포넌트 초기 세팅')
+        }
+        template() {
+            // react component html의 내용을 반환 즉 화면에 그리는 역활을 하는것
+            // 자바스크립트 영역을 html 에 같이 작성하잖아아
+            return `<div></div>`
+        }
+
+        render() {
+            // 컴포넌트의 즉 타겟의 요소를 렌더링
+            this.target.innerHTML = this.template();
+            // 이벤트를 등록 요소를 안만들면 이벤트를 등록할 요소의 주소를 알고 이벤트를 등록하려면 요소가 생성된 이후에 가능하기 떄문에
+            this.setEvent();
+        }
+
+        setEvent() {
+            console.log('컴포넌트의 요소에 이벤트를 등록')
+        }
+
+        setState(_state) {
+            // this.setState({name : 'soon2'})
+            // 자바스크립트 기초초
+            // 이전의 값을 있으면서 유지하면서 다른 값을 할당할수 있어야한다
+            this.state = {...this.state, ..._state}  // 변수에 있는 값만 복사해온다
+            // this.state = {name : 'soon', count : 0, name : 'soon2'}  // 변수에 있는 값만 복사해온다
+            // return value will be = {name : soon2, count : 0}
+            // 이전 상태의 값을 관리할수 있는 구조
+            this.render(); // 해당 컴포넌트 리렌더링
+            // 리렌더링 중요 ** 이거 리렌더링안되면 컴포넌트에서 그려주는 UI 는 절때로 변화할수 없어
+        }
+    }
+
+
+    // 가상돔
+    class VirtualDOM {
+        // 노드를 탐색하면서 어느 부분이 변화하였는지 판단해서 그려준다
+        constructor(target) {
+            this.component = new App(target);   // 생선되는 커포넌트들을 관리를 하고 있을거고 여기는 흉내
+        }
+        render() {
+            // 컴포넌트 렌더링
+            // 그려야되는 컴포넌트들
+            this.component.render();
+        }
+    }   
+
+    // 리스트를 생성하는 컴포넌트
+    class App extends Component {
+        setUp() {
+            // 초기 세팅 상태값
+            this.state = {item : ['추가되어있는 아이템 1']}
+        }
+        // [1,2,3,4,5,6].join() ===> html의 문자열로 변환 123456
+        template () {
+            const {item} = this.state;
+            console.log(item)
+            return `<ul>
+                ${item.map((i)=>`<li>${i}</li>`).join('')}  
+            </ul>
+            <button>추가</button>
+            `
+        }
+        setEvent() {
+            console.log(this.target);
+            this.target.querySelector('button').addEventListener('click',() => {
+                const {item} = this.state;
+                this.setState({item : [...item, `추가된 아이템 ${item.length + 1}`]})
+            })
+        }
+    }
+    const root = new VirtualDOM(document.querySelector('#root'))
+    root.render();
+</script>
+</html>
