@@ -1,0 +1,8 @@
+
+
+
+{
+    "plugins" : ["@babel/plugin-transform-modules-commonjs"] // 기본 설정 프리셋
+}
+
+// plugins : 사용할 플러그인 작작
