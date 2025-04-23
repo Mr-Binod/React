@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Contentwrap {
+  width: 458px;
+  height: 441px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #a5adb8;
+  border-radius: 10px;
+}
+
+.Inputdiv {
+  width: 410px;
+  height: 60px;
+  border: 1px solid rgb(189, 189, 189);
+}
+.Btn {
+  width: 410px;
+  margin: 0 auto;
+}
+.Btn button {
+  width: 410px;
+  height: 60px;
+  margin: 0 auto;
+  border: none;
+  background-color: #a5adb8;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  box-sizing: border-box;
+}
+
+.Inputdiv input {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.Inputdiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 7px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.Inputdiv label {
+  display: inline-block;
+  position: absolute;
+  font-size: 16px;
+  bottom: 20px;
+
+}
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+.Inputdiv.focus label {
+  top: 10px;
+  font-size: 12px;
+  transition: all .3s cubic-bezier(.4,0,.2,1);
+  animation: slideIn 1s ease-in-out;
+}
+
+.Titlecontent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Titlediv {
+  width: 230px;
+  height: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(224, 224, 224);
+}
+
+.Inputcontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 900;
+  color: rgb(7, 189, 7);
+}
+
+.Spancontent {
+  width: 410px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
