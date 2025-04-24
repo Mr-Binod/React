@@ -10,4 +10,22 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  }
+  
+  
+.bomb-wrap {
+  width: 60px;
+  border: 1px solid;
+  box-sizing: border-box;
+  overflow: hidden;
 }
+
+.bomb-wrap img {
+  width: 100%;
+}
+
+.Boomgamewrap {
+    width: 180px;
+    display: flex;
+    flex-wrap: wrap;
+  }
