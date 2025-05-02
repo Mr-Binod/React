@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { memo } from 'react'
 import styled from 'styled-components';
-
+import { useContext } from 'react';
+import { DataStore } from '../Store/Store';
 
 const Wrap = styled.div`
     width: ${({width}) => width ? width : '40px'};
@@ -18,13 +19,14 @@ const Wrap = styled.div`
 `
 
 
-const Content = ({children, width, height, border, center}) => {
-  console.log(children)
+const Content = memo(({children, width, height, border, center}) => {
+  // const {Contentname} = useContext(DataStore)
+  console.log(children + "---------------------------------")
   return (
     <Wrap width={width} height={height} border={border} center={center}>
       {children}
     </Wrap>
   )
-}
+})
 
 export default Content;
