@@ -2,7 +2,7 @@
 # Babel webpack
 
 ## Babel 
-> bebel 은 선택이 아니라 필수 였다.
+> babel 은 선택이 아니라 필수 였다.
 > 최신문법으로 개발을 하면서 코드 생산성을 높이고 그 문법을 ES5로 변환해서 사용하였다
 > 외 공백기가 있었기때문에 과두기 기술이 너무 빠르게 발전전
 
@@ -123,7 +123,7 @@ npm i -D @babel/plugin-transform-modules-commonjs
 
 3. babel jsx 문법 변환
 ```sh
-npm i -D npm i @babel/preset-react
+npm i -D @babel/preset-react
 
 ```
 

@@ -13,7 +13,7 @@
 
 > 컴포넌트로 UI 를 구분해서 작업하고 있었고
 > css 도 컴포넌트 단위로 구분하면 어떨따?
-> css in javascript 로직으로 css 다뤄서 작업을 하는것이 낱생
+> css in javascript 로직으로 css 다뤄서 작업을 하는것이 탄탄생
 > 스타일도 컴포넌트에 포함시켜서 작성을 하자
 
 ### css in js 란

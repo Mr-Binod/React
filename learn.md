@@ -12,3 +12,23 @@ WEB SOCKET =
 
 리엑트의 생명주기를
 
+
+
+
+대체 : alternative
+sunk redux
+
+
+functions of react and their properties
+
+useState
+useEffect
+useContext
+Memo
+useMemo
+useReducer
+reducer  (state and ac)
+Navigate
+BrowserRouter
+Routes
+Route
