@@ -27,7 +27,6 @@ export default class Card extends Component {
             console.log('보상 당첨 추카추카')
         }
     }
-    
     render() {
         console.log(`${this.props.content} 나 리렌더링 됬다`)
         return (
