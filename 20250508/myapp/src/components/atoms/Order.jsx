@@ -18,7 +18,6 @@ const Order = () => {
     const orderHandler = () => {
         if(userInfo){
             try {
-                
                 dispatch({
                     type: data[select].code, 
                     payload : {orderName : data[select].name, 
