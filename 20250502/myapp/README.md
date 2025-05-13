@@ -15,7 +15,7 @@ const app = () => {
         <C name={name} age uid upw>
         </C>
     )
-}
+}          
 
 ```
 ## Context 문법
